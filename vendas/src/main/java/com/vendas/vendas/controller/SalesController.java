@@ -31,7 +31,7 @@ public class SalesController {
 		return ResponseEntity.status(HttpStatus.OK).body(services.findBySellerName(sellerName).get()); 
 	}
 	
-	@GetMapping(path = "sales")
+	@GetMapping(path = "sales/date_range")
 	public ResponseEntity<List<Sales>> salesFindByDate(@RequestParam String minDate, @RequestParam String maxDate) {
 		return ResponseEntity.status(HttpStatus.OK).body(services.findByDate(minDate, maxDate));
 	}
